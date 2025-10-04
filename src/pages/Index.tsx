@@ -34,7 +34,9 @@ const Index = () => {
   };
 
   const techStack = [
-    "HTML", "CSS", "JavaScript", "ASP.NET/C#", "PostgreSQL", "Docker"
+    "HTML5", "CSS", "Tailwind CSS", "React Native", "Next.js", "TypeScript", 
+    "JavaScript", "ASP.NET/C#", "PostgreSQL", "Docker", "Kotlin", "Expo", 
+    "pgAdmin", "Visual Studio 2022", "VS Code", "Android Studio"
   ];
 
   const features = [
@@ -187,15 +189,16 @@ const Index = () => {
       </section>
 
       {/* Tech Stack Section */}
-      <section id="tech-stack" className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
+      <section id="tech-stack" className="py-20 px-4 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
+        <div className="container mx-auto max-w-6xl text-center">
           <h3 className="text-3xl font-bold mb-12 text-foreground">Technology Stack</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {techStack.map((tech) => (
+          <div className="flex flex-wrap justify-center gap-4">
+            {techStack.map((tech, index) => (
               <Badge 
                 key={tech} 
                 variant="secondary" 
-                className="px-6 py-2 text-base font-medium hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                className="px-6 py-3 text-base font-medium hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all shadow-md cursor-default animate-slide-in"
+                style={{ animationDelay: `${index * 0.05}s` }}
               >
                 {tech}
               </Badge>
