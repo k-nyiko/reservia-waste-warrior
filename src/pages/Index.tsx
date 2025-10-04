@@ -11,6 +11,7 @@ import {
   Menu,
   X
 } from "lucide-react";
+import heroImage from "@/assets/hero-food-inventory.jpg";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,25 +127,41 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto text-center animate-fade-in">
-          <div className="inline-block mb-4 px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">
-            Building Smarter Food Solutions
+      <section className="relative pt-32 pb-20 px-4 min-h-[90vh] flex items-center overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'grayscale(100%) brightness(0.5)'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent z-0" />
+        
+        <div className="container mx-auto relative z-10 animate-fade-in">
+          <div className="max-w-3xl">
+            <h2 className="text-7xl md:text-8xl font-bold text-foreground/20 mb-4 uppercase tracking-tight">
+              Food Waste
+            </h2>
+            <h3 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              welcome
+            </h3>
+            <div className="w-16 h-1 bg-primary mb-6" />
+            <p className="text-2xl md:text-3xl text-foreground font-medium mb-4">
+              Reduce Food Waste, Maximize Profits
+            </p>
+            <p className="text-lg text-muted-foreground max-w-xl mb-8">
+              Smart technology for retailers to minimize waste and optimize inventory management through intelligent FEFO systems and dynamic pricing.
+            </p>
+            <Button 
+              onClick={() => scrollToSection("about")}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              Learn More
+            </Button>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Reduce Food Waste,<br />
-            <span className="text-primary">Maximize Profits</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Smart technology for retailers to minimize waste and optimize inventory management
-          </p>
-          <Button 
-            onClick={() => scrollToSection("about")}
-            size="lg"
-            className="bg-primary hover:bg-primary/90"
-          >
-            Learn More
-          </Button>
         </div>
       </section>
 
