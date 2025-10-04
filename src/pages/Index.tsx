@@ -136,24 +136,24 @@ const Index = () => {
             backgroundImage: `url(${heroImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter: 'grayscale(100%) brightness(0.5)'
+            filter: 'brightness(0.7) contrast(1.1)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/30 z-0" />
         
         <div className="container mx-auto relative z-10 animate-fade-in">
           <div className="max-w-3xl">
-            <h2 className="text-7xl md:text-8xl font-bold text-foreground/20 mb-4 uppercase tracking-tight">
+            <h2 className="text-7xl md:text-8xl font-bold text-white/30 mb-4 uppercase tracking-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
               Food Waste
             </h2>
-            <h3 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+            <h3 className="text-5xl md:text-6xl font-bold text-white mb-6" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>
               welcome
             </h3>
-            <div className="w-16 h-1 bg-primary mb-6" />
-            <p className="text-2xl md:text-3xl text-foreground font-medium mb-4">
+            <div className="w-16 h-1 bg-primary mb-6 shadow-lg" />
+            <p className="text-2xl md:text-3xl text-white font-semibold mb-4" style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.7)' }}>
               Reduce Food Waste, Maximize Profits
             </p>
-            <p className="text-lg text-muted-foreground max-w-xl mb-8">
+            <p className="text-lg text-white/90 max-w-xl mb-8 font-medium" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
               Smart technology for retailers to minimize waste and optimize inventory management through intelligent FEFO systems and dynamic pricing.
             </p>
             <Button 
